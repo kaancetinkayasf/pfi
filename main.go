@@ -1,19 +1,28 @@
 package main
 
 import (
+	"flag"
 	"fmt"
-	"kaancetinkaya/m/pkg/utils"
 	"os"
+	"pfi/pkg/utils"
 )
 
 func main() {
 
+	var path string
 	dictionary := make(map[string]int)
-	path, err := os.Getwd()
-	if err != nil {
-		fmt.Println(err)
+
+	flag.StringVar(&path, "path", ".", "project path")
+	flag.Parse()
+
+	if len(os.Args) < 2 {
+		fmt.Println("Error: Please provide a path. If you want to inspect the current directory, try 'pfi -path .'")
+		os.Exit(1)
 	}
 
-	utils.ReadDir(path, dictionary)
-	utils.PrintItemsByValue(dictionary)
+	if path == "." {
+		utils.ReadDir(path, dictionary)
+		utils.PrintItemsByValue(dictionary)
+	}
+
 }
