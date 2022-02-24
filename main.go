@@ -20,9 +20,7 @@ func main() {
 		os.Exit(1)
 	}
 
-	if path == "." {
-		utils.ReadDir(path, dictionary)
-		utils.PrintItemsByValue(dictionary)
-	}
+	utils.ReadDir(path, dictionary)
+	utils.PrintItemsByValue(dictionary)
 
 }
