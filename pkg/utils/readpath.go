@@ -24,10 +24,6 @@ func ReadDir(dirname string, dic map[string]int) (dict map[string]int) {
 			continue
 		}
 
-		if item.Size() < 1000 {
-			continue
-		}
-
 		dic[item.Name()] = int(item.Size())
 
 	}
