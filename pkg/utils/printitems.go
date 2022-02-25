@@ -13,7 +13,6 @@ var (
 )
 
 var totalSize float64
-var unit string
 
 func PrintItemsByValue(dictionary map[string]float64) {
 
@@ -27,14 +26,6 @@ func PrintItemsByValue(dictionary map[string]float64) {
 	if fileErr != nil {
 		fmt.Println(fileErr)
 		return
-	}
-
-	if totalSize >= 1000 {
-		unit = "KB"
-	}
-
-	if totalSize >= 1000000 {
-		unit = "MB"
 	}
 
 	fmt.Fprintf(file, "Total size: %s\n", HumanFileSize(totalSize))
