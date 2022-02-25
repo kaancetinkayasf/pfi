@@ -10,7 +10,7 @@ import (
 func main() {
 
 	var path string
-	dictionary := make(map[string]int)
+	dictionary := make(map[string]float64)
 
 	flag.StringVar(&path, "path", ".", "project path")
 	flag.Parse()
