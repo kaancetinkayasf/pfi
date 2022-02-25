@@ -22,7 +22,7 @@ func PrintItemsByValue(dictionary map[string]float64) {
 		totalSize += float64(dictionary[key])
 	}
 
-	file, fileErr := os.Create("file.txt")
+	file, fileErr := os.Create("results.txt")
 	if fileErr != nil {
 		fmt.Println(fileErr)
 		return
