@@ -5,7 +5,7 @@ import (
 	"io/ioutil"
 )
 
-func ReadDir(dirname string, dic map[string]int) (dict map[string]int) {
+func ReadDir(dirname string, dic map[string]float64) (dict map[string]float64) {
 
 	list, err := ioutil.ReadDir(dirname)
 	if err != nil {
@@ -24,7 +24,11 @@ func ReadDir(dirname string, dic map[string]int) (dict map[string]int) {
 			continue
 		}
 
-		dic[item.Name()] = int(item.Size())
+		if item.Size() < 1000 {
+			continue
+		}
+
+		dic[item.Name()] = float64(item.Size())
 
 	}
 
