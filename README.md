@@ -7,4 +7,8 @@
 
 ## Installation
 
-<p>Download the latest binary from releases section and extract it to a destination you like (The results will be written in the same directory you place the binary file.)</p>
+<p>Download the latest binary from the releases section and extract it to a destination you like (The results will be written in the same directory you place the binary file.)</p>
+
+## Usage
+
+<p> - Make sure you are in the same directory with the file you have downloaded.</p>
