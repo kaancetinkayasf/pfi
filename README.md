@@ -11,7 +11,7 @@
 
 ## Usage
 
-<p> - Make sure you are in the same directory with the file you have downloaded.
-    - Run "pfi -path (the path you want to inspect)". If you want to inspect the current directory, run "pfi -path ."
-    - The results.txt file will be created in the current working directory.
-</p>
+- Make sure you are in the same directory with the file you have downloaded.
+- Run "pfi -path (the path you want to inspect)". If you want to inspect the current directory, run "pfi -path ."
+- The results.txt file will be created in the current working directory.
+
