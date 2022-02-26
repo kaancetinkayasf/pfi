@@ -1,5 +1,9 @@
 name: Release Go project
 
+before:
+  hooks:
+    - go mod download
+
 on:
   push:
     tags:
@@ -9,7 +13,6 @@ jobs:
   build:
     name: GoReleaser build
     runs-on: ubuntu-latest
-
  
 
     steps:
