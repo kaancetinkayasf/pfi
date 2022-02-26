@@ -1,0 +1,4 @@
+Total size: 1.54 KB
+------------------------------------------------
+Filename: printitems.go
+Size: 1.54 KB | % 100.00 of total space

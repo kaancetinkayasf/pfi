@@ -41,10 +41,11 @@ func PrintItemsByValue(dictionary map[string]float64) {
 
 	}
 
+	fmt.Println("The results.txt file is created")
 }
 
 func HumanFileSize(size float64) string {
-	fmt.Println(size)
+
 	suffixes[0] = "B"
 	suffixes[1] = "KB"
 	suffixes[2] = "MB"
