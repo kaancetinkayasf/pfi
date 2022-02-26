@@ -4,6 +4,36 @@ before:
   hooks:
     - go mod download
 
+builds:
+  - id: jx
+    # Path to main.go file or main package.
+    # Default is `.`.
+    main: ./cmd/main.go
+
+    # Binary name.
+    # Can be a path (e.g. `bin/app`) to wrap the binary in a directory.
+    # Default is the name of the project directory.
+    binary: pfi
+
+    # GOOS list to build for.
+    # For more info refer to: https://golang.org/doc/install/source#environment
+    # Defaults are darwin and linux.
+    goos:
+      - windows
+      - linux
+
+    # GOARCH to build for.
+    # For more info refer to: https://golang.org/doc/install/source#environment
+    # Defaults are 386 and amd64.
+    goarch:
+      - amd64
+      - arm
+      - arm64
+      
+changelog:
+  # set it to true if you wish to skip the changelog generation
+  skip: true
+
 on:
   push:
     tags:
